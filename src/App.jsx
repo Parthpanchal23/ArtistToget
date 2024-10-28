@@ -7,7 +7,9 @@ import Home2 from './Pages/home/home2'
 import Home3 from './Pages/home/home3'
 import Checkout from "./Pages/Checkout";
 import Invoice from "./Pages/Invoice";
-import BlogDetails from "./Pages/blog/details/index";
+
+import Login from "./Pages/Auth/Login";
+import Signup from "./Pages/Auth/Signup";
 function App() {
   return (<React.Fragment>
     {/* <AuthLayout>
@@ -15,7 +17,9 @@ function App() {
        <Home2/>
        <Home3/>
     </AuthLayout> */}
-    <BlogDetails/>
+
+    {/* <Login/> */}
+    <Signup/>
      </React.Fragment>
   )
 }
