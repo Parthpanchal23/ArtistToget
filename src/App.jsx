@@ -7,14 +7,15 @@ import Home2 from './Pages/home/home2'
 import Home3 from './Pages/home/home3'
 import Checkout from "./Pages/Checkout";
 import Invoice from "./Pages/Invoice";
-
+import BlogDetails from "./Pages/blog/details/index";
 function App() {
   return (<React.Fragment>
-    <AuthLayout>
+    {/* <AuthLayout>
        <Home1/> 
        <Home2/>
        <Home3/>
-    </AuthLayout>
+    </AuthLayout> */}
+    <BlogDetails/>
      </React.Fragment>
   )
 }

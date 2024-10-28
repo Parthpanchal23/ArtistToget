@@ -77,7 +77,7 @@ $ npm i
 # Run the project
 $ npm run dev
 
-# The server will initialize in the <http://localhost:3000>
+# The server will initialize in the <http://localhost:5173>
 ```
 
 ## :memo: License
