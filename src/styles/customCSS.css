@@ -1,0 +1,29 @@
+#logo img
+{
+	height:90px; 
+	width:auto; 
+	top:45%; 
+	position:relative; 
+	transform:translate3d(0,-50%,0); 
+}
+
+#header .right-side{
+	right: 100px;
+ }
+
+#header .left-side
+ {
+    width: 100% !important;
+ }
+
+.header-notifications-trigger
+{
+	    position: absolute;
+    right: 50px;
+}
+
+.header-notifications user-menu
+{
+	    position: absolute !important;
+    right: 15px !important;
+}

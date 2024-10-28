@@ -1,0 +1,8 @@
+#logo img
+{
+	height:90px; !important
+	width:auto; !important
+	top:45%; !important
+	position:relative; !important
+	transform:translate3d(0,-50%,0); !important
+}
