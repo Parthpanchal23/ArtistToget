@@ -4,14 +4,13 @@ export const useHttpClient = () => {
   const [isloading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
  const activeHttpRequests =useRef([]);
-  const sendRequest = useCallback(async ({
+  const sendRequest = useCallback(async (
     url,
     method = "GET",
     body = null,
     headers = {},
-  }) => {
+  ) => {
     setIsLoading(true);
-
     const httpAbortControll = new AbortController();
     activeHttpRequests.current.push(httpAbortControll);
 
@@ -24,18 +23,20 @@ export const useHttpClient = () => {
       });
 
       const responseData = await response.json();
-
+      
+      activeHttpRequests.current = activeHttpRequests.current.filter(reqCtl =>reqCtl !== httpAbortControll);
       if (!response.ok) {
-        throw new Error(response?.data?.message);
+        throw new Error(responseData?.message);
       }
 
+      setIsLoading(false);
       return responseData;
 
     } catch (err) {
-        setError(err?.message);
-        
+        setError(err?.message||err);
+        setIsLoading(false);
+        throw err;
     }
-    setIsLoading(false);
   },[]);
 
 const clearError =()=>{
@@ -44,7 +45,7 @@ const clearError =()=>{
 
 useEffect(()=>{
     return ()=>{
-        activeHttpRequests.current.forEach(abortCntrl =>abortCntrl.abort());
+        activeHttpRequests.current.forEach(abortCntrl =>abortCntrl.abort())
     };
 },[])
   return {isloading,error,sendRequest,clearError}

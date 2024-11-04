@@ -1,12 +1,26 @@
 import React from 'react'
 import { useForm } from "react-hook-form"
+import { useHttpClient } from '../../lib/http-hook';
 
 const RegistartionForm = (props) => {
 	const {register,watch,handleSubmit,formState:{errors}} =useForm();
 	const selectOption =watch('userType');
-	console.log("selectOption",errors,selectOption);
-	const onSubmit =(data)=>{
-		console.log("Data",data);
+	const {isloading,error,sendRequest,clearError}=useHttpClient();
+	const onSubmit =async (data)=>{
+			
+			const responseData =await sendRequest('http://localhost:5000/api/v1/user/signup',
+				"POST",
+				JSON.stringify({...data,image:data?.image[0]?.name}),
+				{
+					'Content-Type':'application/json'
+				},
+			)
+			if(responseData?.status === 'created sucessfully')
+			{
+				alert(responseData?.status);
+
+			}
+		
 	}
   return (
     <div>
@@ -24,7 +38,7 @@ const RegistartionForm = (props) => {
 					</div>
 						
 					<div>
-						<input type="radio" name="account-type-radio" value="HIRER" id="HIRER" className="account-type-radio" {...register('userType',{required:true})} />
+						<input type="radio" name="account-type-radio" value="HIRER" id="HIRER" className="account-type-radio" {...register('userType',{required:true})} checked />
 						<label for="employer-radio" className="ripple-effect-dark"><i className="icon-material-outline-business-center"></i> Hirer</label>
 					</div>
 				</div>
@@ -83,8 +97,8 @@ const RegistartionForm = (props) => {
 						{errors.description && <span className ="text-red-600 ">This field is required</span>}
 					</div>)}
 					<div>
-						<input type="text" className="input-text with-border block" name="contact" id="contact" placeholder="Contact"  {...register('contact',{required:true})} />
-						{errors.contact && <span className ="text-red-600 " >This field is required</span>}
+						<input type="text" className="input-text with-border block" name="phone" id="phone" placeholder="Contact"  {...register('phone',{required:true})} />
+						{errors.phone && <span className ="text-red-600 " >This field is required</span>}
 					</div>
 					<div>
 						<input type="file" name="photo" id="photo" style={{height: "54px",display: "block", padding: "0px"}} {...register('image',{required:true})} />
