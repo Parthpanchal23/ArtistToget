@@ -18,8 +18,7 @@ function App() {
        <Home3/>
     </AuthLayout> */}
 
-    {/* <Login/> */}
-    <Signup/>
+    <Login/>
      </React.Fragment>
   )
 }
