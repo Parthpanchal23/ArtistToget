@@ -36,7 +36,7 @@ let days =Math.round
           <li>
             <i className="icon-material-outline-access-time"></i> {days} days ago
           </li>
-          {data?.keyword &&
+          {data?.keyword && data?.keyword?.length> 0 &&
           <li>
             <i className="icon-material-outline-business-center"></i> {data?.keyword?.[0]}
           </li>

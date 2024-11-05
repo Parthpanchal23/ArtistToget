@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import FeatureItem from "./FeatureItem";
 import Heding from "../../Heding";
 import { useHttpClient } from "../../../lib/http-hook";
-const FeatureJob = ({title}) => {
+const FeatureJob = ({ title }) => {
   const DefaultData = [
     {
       Title: "Bilingual Event Support Specialist",
@@ -121,23 +121,21 @@ const FeatureJob = ({title}) => {
     },
   ];
 
-  const[JobData,setJobData]=useState([]);
-  const {isloading,error,sendRequest,clearError}= useHttpClient()
-  
-  useEffect(()=>{
-    const fetchUser = async ()=>{
-      const response =await sendRequest('http://localhost:5000/api/v1/post/');
-      if(!response.status ==='Sucess') {
+  const [JobData, setJobData] = useState([]);
+  const { isloading, error, sendRequest, clearError } = useHttpClient();
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const response = await sendRequest("http://localhost:5000/api/v1/post/");
+      if (!response.status === "Sucess") {
         throw new Error(response.message);
       }
-      if(response?.data)
-      {
-
-        setJobData(response?.data)
+      if (response?.data) {
+        setJobData(response?.data);
       }
-    }
+    };
     fetchUser();
-  },[])
+  }, []);
 
   return (
     <div>
@@ -145,22 +143,33 @@ const FeatureJob = ({title}) => {
         <div className="container">
           <div className="row">
             <div className="col-xl-12">
-             
-                <Heding  title={title?title:""}>
+              <Heding title={title ? title : ""}>
                 <a
                   href="jobs-list-layout-full-page-map.html"
                   className="headline-link"
                 >
                   Browse All Jobs
                 </a>
-                </Heding>
-                { isloading &&<p>Loading ...</p>} 
-                {JobData && JobData?.length > 0 &&(
-              <div className={`listings-container compact-list-layout margin-top-35 ${JobData?.length == 0&&"flex justify-center align-center"}`} key={JobData}>
+              </Heding>
 
-                {JobData&&JobData?.length > 0 ?
-                  JobData?.map((item, i) => <FeatureItem data={item} key={i} />):(<p className="text-slate-600 "> No Jobs Found</p>)}
-              </div>)}
+              {isloading && <p>Loading ...</p>}
+
+              {JobData && JobData?.length > 0 && (
+                <div
+                  className={`listings-container compact-list-layout margin-top-35 ${
+                    JobData?.length == 0 && "flex justify-center align-center"
+                  }`}
+                  key={JobData}
+                >
+                  {JobData && JobData?.length > 0 ? (
+                    JobData?.map((item, i) => (
+                      <FeatureItem data={item} key={i} />
+                    ))
+                  ) : (
+                    <p className="text-slate-600 "> No Jobs Found</p>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>
