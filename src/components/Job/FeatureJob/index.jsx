@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FeatureItem from "./FeatureItem";
 import Heding from "../../Heding";
+import { useHttpClient } from "../../../lib/http-hook";
 const FeatureJob = ({title}) => {
-
-  const JobData = [
+  const DefaultData = [
     {
       Title: "Bilingual Event Support Specialist",
       href: "/",
@@ -121,6 +121,24 @@ const FeatureJob = ({title}) => {
     },
   ];
 
+  const[JobData,setJobData]=useState([]);
+  const {isloading,error,sendRequest,clearError}= useHttpClient()
+  
+  useEffect(()=>{
+    const fetchUser = async ()=>{
+      const response =await sendRequest('http://localhost:5000/api/v1/post/');
+      if(!response.status ==='Sucess') {
+        throw new Error(response.message);
+      }
+      if(response?.data)
+      {
+
+        setJobData(response?.data)
+      }
+    }
+    fetchUser();
+  },[])
+
   return (
     <div>
       <div className="section gray margin-top-45 padding-top-65 padding-bottom-75">
@@ -136,11 +154,13 @@ const FeatureJob = ({title}) => {
                   Browse All Jobs
                 </a>
                 </Heding>
+                { isloading &&<p>Loading ...</p>} 
+                {JobData && JobData?.length > 0 &&(
+              <div className={`listings-container compact-list-layout margin-top-35 ${JobData?.length == 0&&"flex justify-center align-center"}`} key={JobData}>
 
-              <div className="listings-container compact-list-layout margin-top-35">
-                {JobData?.length &&
-                  JobData.map((item, i) => <FeatureItem data={item} key={i} />)}
-              </div>
+                {JobData&&JobData?.length > 0 ?
+                  JobData?.map((item, i) => <FeatureItem data={item} key={i} />):(<p className="text-slate-600 "> No Jobs Found</p>)}
+              </div>)}
             </div>
           </div>
         </div>

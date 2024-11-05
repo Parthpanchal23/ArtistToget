@@ -45,7 +45,7 @@ const clearError =()=>{
 
 useEffect(()=>{
     return ()=>{
-        activeHttpRequests.current.forEach(abortCntrl =>abortCntrl.abort())
+        activeHttpRequests?.current?.forEach(abortCntrl =>abortCntrl.abort())
     };
 },[])
   return {isloading,error,sendRequest,clearError}

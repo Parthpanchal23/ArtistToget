@@ -12,13 +12,12 @@ import Login from "./Pages/Auth/Login";
 import Signup from "./Pages/Auth/Signup";
 function App() {
   return (<React.Fragment>
-    {/* <AuthLayout>
-       <Home1/> 
+    <AuthLayout>
+       {/* <Home1/>  */}
        <Home2/>
-       <Home3/>
-    </AuthLayout> */}
+       {/* <Home3/> */}
+    </AuthLayout>
 
-    <Login/>
      </React.Fragment>
   )
 }
