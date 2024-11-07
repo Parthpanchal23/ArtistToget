@@ -3,6 +3,7 @@ import { UploadIcon } from "../../assets/icons/upload";
 import { CloseIcon } from "../../assets/icons/close";
 
 const ImageUpload = (props) => {
+  
   const filePikerRef = useRef();
   const [File, setFile] = useState([]);
   const [previewUrl, setPreviewUrl] = useState("");
@@ -33,17 +34,17 @@ const ImageUpload = (props) => {
     let fileIsValid = isValid;
 
     if (e?.target?.files && e?.target?.files.length === 1) {
-      console.log("deded", e?.target?.files);
       pickedFile = e?.target?.files[0];
       setFile(pickedFile);
       setIsValid(true);
+      props?.onChange(pickedFile);
       fileIsValid = true;
       return;
     } else {
       fileIsValid = false;
       setIsValid(false);
     }
-    props?.OnInput(props?.id, pickedFile, fileIsValid);
+    props?.onChange(props?.id, pickedFile, fileIsValid);
   };
 
   const ClearFile = () => {
@@ -61,7 +62,7 @@ const ImageUpload = (props) => {
         className="cursor-pointer hidden"
       />
 
-      <div className={`${props?.center && "justify-center"} gap-x-3 flex justify-center align-center `}>
+      <div className={`${props?.center && "justify-center"} gap-x-3 flex justify-center align-center sm:flex-row `}>
         <button className=" border-dashed rounded-xl flex-col justify-center align-center item-center p-4 hover:text-blue-600 " onClick={ImageHandler}>
           <UploadIcon className="hover:text-blue-600"/>
         </button>
@@ -90,7 +91,7 @@ const ImageUpload = (props) => {
         </div>
         
       </div>
-      {!isValid && <p>{props?.errorText}</p>}
+      {isValid&& !isValid && <p>{props?.errorText}</p>}
     </div>
   );
 };

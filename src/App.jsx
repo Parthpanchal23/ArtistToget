@@ -18,7 +18,7 @@ function App() {
        {/* <Home2/> */}
        {/* <Home3/> */}
     {/* </AuthLayout> */}
-<ImageUpload/>
+    <Signup/>
      </React.Fragment>
   )
 }
