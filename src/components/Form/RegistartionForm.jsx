@@ -8,19 +8,28 @@ const RegistartionForm = (props) => {
 	const selectOption =watch('userType');
 	const {isloading,error,sendRequest,clearError}=useHttpClient();
 	const onSubmit =async (data)=>{
-			console.log("data",data);
-			// const responseData =await sendRequest('http://localhost:5000/api/v1/user/signup',
-			// 	"POST",
-			// 	JSON.stringify({...data,image:data?.image[0]?.name}),
-			// 	{
-			// 		'Content-Type':'application/json'
-			// 	},
-			// )
-			// if(responseData?.status === 'created sucessfully')
-			// {
-			// 	alert(responseData?.status);
+			const formdata =new FormData();
+			formdata?.append('Exp_Level',data?.Exp_Level);
+			formdata?.append('art_Subcategory',data?.art_Subcategory);
+			formdata?.append('art_category',data?.art_category);
+			formdata?.append('city',data?.city);
+			formdata?.append('description',data?.description);
+			formdata?.append('email',data?.email);
+			formdata?.append('exp_year',data?.exp_year);
+			formdata?.append('image',data?.image);
+			formdata?.append('name',data?.name);
+			formdata?.append('password',data?.password);
+			formdata?.append('phone',data?.phone);
+			formdata?.append('userType',data?.userType);
 
-			// }
+			const responseData =await sendRequest('http://localhost:5000/api/v1/user/signup',
+				"POST",
+				formdata,
+			)
+			if(responseData?.status === 'created sucessfully')
+			{
+				alert(responseData?.status);
+			}
 		
 	}
   return (
