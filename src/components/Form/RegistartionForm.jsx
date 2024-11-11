@@ -4,7 +4,7 @@ import { useHttpClient } from '../../lib/http-hook';
 import ImageUpload from '../Ui/ImageUpload';
 
 const RegistartionForm = (props) => {
-	const {register,watch,handleSubmit,formState:{errors,isDirty, isValid},setValue} =useForm();
+	const {register,watch,handleSubmit,formState:{errors,isDirty, isValid},setValue,reset} =useForm();
 	const selectOption =watch('userType');
 	const {isloading,error,sendRequest,clearError}=useHttpClient();
 	const onSubmit =async (data)=>{
@@ -28,6 +28,7 @@ const RegistartionForm = (props) => {
 			)
 			if(responseData?.status === 'created sucessfully')
 			{
+				reset();
 				alert(responseData?.status);
 			}
 		
@@ -54,14 +55,10 @@ const RegistartionForm = (props) => {
 					</div>
 				</div>
 				<div>
-					<ImageUpload name="photo" id="photo" {...register('image',{required:true}	)} onChange={(pros)=>{
-						console.log("d",pros);
-						setValue('image',pros);
-					}}/>
+					<ImageUpload name="photo" id="photo" {...register('image',{required:true}	)} onChange={(pros)=> setValue('image',pros)}/>
 						{/* <input type="file" name="photo" id="photo" style={{height: "54px",display: "block", padding: "0px"}} {...register('image',{required:true})} /> */}
 						{errors.image && <span className ="text-red-600 ">This field is required</span>}
 					</div>
-				
 					<div>
 						<input type="text" className="input-text with-border block" name="Name" id="name" placeholder="Name"  {...register('name')} />
 						{errors.name && <span className ="text-red-600 ">This field is required</span>}	
@@ -141,7 +138,6 @@ const RegistartionForm = (props) => {
 						
 				<button 
 				className="margin-top-10 button full-width button-sliding-icon ripple-effect" 
-				// disabled={!isDirty || !isValid}
 				type="submit" 
 				name="btnInsert" form="register-account-form">
 					Register <i className="icon-material-outline-arrow-right-alt"></i></button>

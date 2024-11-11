@@ -19,6 +19,7 @@ function App() {
        {/* <Home3/> */}
     {/* </AuthLayout> */}
     <Signup/>
+    <Login/>
      </React.Fragment>
   )
 }
