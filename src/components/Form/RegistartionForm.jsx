@@ -39,6 +39,7 @@ const RegistartionForm = (props) => {
 				
 				<div className="welcome-text">
 					<h3>Let's create your account!</h3>
+					<span>Don you have an account? <a href="/" className="register-tab">Sign Up!</a></span>
 				</div>
 				<form  id="register-account-form" onSubmit={handleSubmit(onSubmit)} >
 				<div className="account-type">
@@ -54,86 +55,88 @@ const RegistartionForm = (props) => {
 						<label for="employer-radio" className="ripple-effect-dark"><i className="icon-material-outline-business-center"></i> Hirer</label>
 					</div>
 				</div>
+				{selectOption&& <>
 				<div>
 					<ImageUpload name="photo" id="photo" {...register('image',{required:true}	)} onChange={(pros)=> setValue('image',pros)}/>
-						{/* <input type="file" name="photo" id="photo" style={{height: "54px",display: "block", padding: "0px"}} {...register('image',{required:true})} /> */}
-						{errors.image && <span className ="text-red-600 ">This field is required</span>}
-					</div>
-					<div>
-						<input type="text" className="input-text with-border block" name="Name" id="name" placeholder="Name"  {...register('name')} />
-						{errors.name && <span className ="text-red-600 ">This field is required</span>}	
-					</div>
-					{selectOption === 'ARTIST' && (
-					<div>
-						<select name="city" className='block'  {...register('city')}>
-							<option value="Ahmedabad">Ahmedabad</option>
-							<option value="Surat">Surat</option>
-							<option value="Rajkot">Rajkot</option>
-							<option value="Jamnagar">Jamnagar</option>
-							<option value="Vadodara">Vadodara</option>
-						</select>   
-						{errors.city && <span className ="text-red-600 ">This field is required</span>}	
-					</div>)}
-					{selectOption === 'ARTIST' && (
-					<div>
-						<input type="text" className="input-text with-border block" name="exp_year" id="ExperienceYear" placeholder="Experience Year"  {...register('exp_year')} />
-						{errors.exp_year && <span className ="text-red-600 ">This field is required</span>}
-					</div>)}
-					{selectOption === 'ARTIST' && (
-					<div>
-						<select name="Exp_Level" id="Exp_Level" className="block" {...register('Exp_Level')}>
-							<option value="Bigner">Beginner</option>
-							<option value="Intermediate">Intermediate</option>
-							<option value="Expert">Expert</option>
-						</select>
-						{errors.Exp_Level && <span className ="text-red-600 ">This field is required</span>}
-					</div>)}
-					{selectOption === 'ARTIST' && (
-					<div>
-						<select name="art_categort" id="art_categort" className='block' {...register('art_category')} >
-							<option value="Dance">Dance</option>
-							<option value="Music">Music</option>
-							<option value="singer">Singer</option>
-						</select>
-						{errors.art_category && <span className ="text-red-600 ">This field is required</span>}
-					</div>)}
-					{selectOption === 'ARTIST' && (
-					<div>
-						<select name="art_Subcategory" id="art_Subcategory" className="block" {...register('art_Subcategory')}>
-							<option value="Freestyle">Freestyle</option>
-							<option value="Drumer">Drumer</option>
-							<option value="Pop">Pop Singer</option>
-						</select>
-						{errors.art_SubCategory && <span className ="text-red-600 ">This field is required</span>}
-					</div>)}
-					{selectOption === 'ARTIST' && (
-					<div> 
-						<textarea className="input-text with-border block" name="Description" id="Description" placeholder="Description"  {...register('description')} ></textarea> 
-						{errors.description && <span className ="text-red-600 ">This field is required</span>}
-					</div>)}
-					<div>
-						<input type="text" className="input-text with-border block" name="phone" id="phone" placeholder="Contact"  {...register('phone',{required:true})} />
-						{errors.phone && <span className ="text-red-600 " >This field is required</span>}
-					</div>
+					{errors.image && <span className ="text-red-600 ">This field is required</span>}
+				</div>
+
+				<div>
+					<input type="text" className="input-text with-border block" name="Name" id="name" placeholder="Name"  {...register('name')} />
+					{errors.name && <span className ="text-red-600 ">This field is required</span>}	
+				</div>
+
+				{selectOption === 'ARTIST' && (
+				<div>
+					<select name="city" className='block'  {...register('city')}>
+						<option value="Ahmedabad">Ahmedabad</option>
+						<option value="Surat">Surat</option>
+						<option value="Rajkot">Rajkot</option>
+						<option value="Jamnagar">Jamnagar</option>
+						<option value="Vadodara">Vadodara</option>
+					</select>   
+					{errors.city && <span className ="text-red-600 ">This field is required</span>}	
+				</div>)}
+				{selectOption === 'ARTIST' && (
+				<div>
+					<input type="text" className="input-text with-border block" name="exp_year" id="ExperienceYear" placeholder="Experience Year"  {...register('exp_year')} />
+					{errors.exp_year && <span className ="text-red-600 ">This field is required</span>}
+				</div>)}
+				{selectOption === 'ARTIST' && (
+				<div>
+					<select name="Exp_Level" id="Exp_Level" className="block" {...register('Exp_Level')}>
+						<option value="Bigner">Beginner</option>
+						<option value="Intermediate">Intermediate</option>
+						<option value="Expert">Expert</option>
+					</select>
+					{errors.Exp_Level && <span className ="text-red-600 ">This field is required</span>}
+				</div>)}
+				{selectOption === 'ARTIST' && (
+				<div>
+					<select name="art_categort" id="art_categort" className='block' {...register('art_category')} >
+						<option value="Dance">Dance</option>
+						<option value="Music">Music</option>
+						<option value="singer">Singer</option>
+					</select>
+					{errors.art_category && <span className ="text-red-600 ">This field is required</span>}
+				</div>)}
+				{selectOption === 'ARTIST' && (
+				<div>
+					<select name="art_Subcategory" id="art_Subcategory" className="block" {...register('art_Subcategory')}>
+						<option value="Freestyle">Freestyle</option>
+						<option value="Drumer">Drumer</option>
+						<option value="Pop">Pop Singer</option>
+					</select>
+					{errors.art_SubCategory && <span className ="text-red-600 ">This field is required</span>}
+				</div>)}
+				{selectOption === 'ARTIST' && (
+				<div> 
+					<textarea className="input-text with-border block" name="Description" id="Description" placeholder="Description"  {...register('description')} ></textarea> 
+					{errors.description && <span className ="text-red-600 ">This field is required</span>}
+				</div>)}
+				<div>
+					<input type="text" className="input-text with-border block" name="phone" id="phone" placeholder="Contact"  {...register('phone',{required:true})} />
+					{errors.phone && <span className ="text-red-600 " >This field is required</span>}
+				</div>
 					
+				<div className="input-with-icon-left">
+					<i className="icon-material-baseline-mail-outline"></i>
+					<input type="text" className="input-text with-border" name="emailaddress-register" id="emailaddress-register" placeholder="Email Address"   style={{display:"block"}} {...register('email',{required:true})}/>
+					{errors.email && <span className ="text-red-600 ">This field is required</span>}
+				</div>
 
-					<div className="input-with-icon-left">
-						<i className="icon-material-baseline-mail-outline"></i>
-						<input type="text" className="input-text with-border" name="emailaddress-register" id="emailaddress-register" placeholder="Email Address"   style={{display:"block"}} {...register('email',{required:true})}/>
-						{errors.email && <span className ="text-red-600 ">This field is required</span>}
-					</div>
+				<div className="input-with-icon-left" title="Should be at least 8 characters long" data-tippy-placement="bottom">
+					<i className="icon-material-outline-lock"></i>
+					<input type="password" className="input-text with-border" name="password-register" id="password-register" placeholder="Password"  style={{display:"block"}} {...register('password',{required:true})}/>
+					{errors.password && <span className ="text-red-600 ">This field is required</span>}
+				</div>
 
-					<div className="input-with-icon-left" title="Should be at least 8 characters long" data-tippy-placement="bottom">
-						<i className="icon-material-outline-lock"></i>
-						<input type="password" className="input-text with-border" name="password-register" id="password-register" placeholder="Password"  style={{display:"block"}} {...register('password',{required:true})}/>
-						{errors.password && <span className ="text-red-600 ">This field is required</span>}
-					</div>
-
-					<div className="input-with-icon-left">
-						<i className="icon-material-outline-lock"></i>
-						<input type="password" className="input-text with-border" name="password-repeat-register" id="password-repeat-register" placeholder="Repeat Password"   style={{display:"block"}} {...register('confirmpassword',{required:true})}/>
-						{errors.confirmpassword && <span className ="text-red-600 ">This field is required</span>}
-					</div>
+				<div className="input-with-icon-left">
+					<i className="icon-material-outline-lock"></i>
+					<input type="password" className="input-text with-border" name="password-repeat-register" id="password-repeat-register" placeholder="Repeat Password"   style={{display:"block"}} {...register('confirmpassword',{required:true})}/>
+					{errors.confirmpassword && <span className ="text-red-600 ">This field is required</span>}
+				</div>
+				</>}
 				</form>
 						
 				<button 
