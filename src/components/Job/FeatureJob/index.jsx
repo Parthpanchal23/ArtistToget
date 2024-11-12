@@ -126,7 +126,7 @@ const FeatureJob = ({ title }) => {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const response = await sendRequest("http://localhost:5000/api/v1/post/");
+      const response = await sendRequest(process.env.REACT_APP_BACKEND_URL+"api/v1/post/");
       if (!response.status === "Sucess") {
         throw new Error(response.message);
       }

@@ -22,7 +22,7 @@ const RegistartionForm = (props) => {
 			formdata?.append('phone',data?.phone);
 			formdata?.append('userType',data?.userType);
 
-			const responseData =await sendRequest('http://localhost:5000/api/v1/user/signup',
+			const responseData =await sendRequest(process.env.REACT_APP_BACKEND_URL+"api/v1/user/signup",
 				"POST",
 				formdata,
 			)

@@ -9,7 +9,7 @@ const LoginForm = (props) => {
 
 	const onSubmit =async (data)=>{
 			
-		const responseData =await sendRequest('http://localhost:5000/api/v1/user/login',
+		const responseData =await sendRequest(process.env.REACT_APP_BACKEND_URL+"api/v1/user/login",
 			"POST",
 			JSON.stringify(data),
 			{
