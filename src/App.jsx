@@ -11,15 +11,11 @@ import Invoice from "./Pages/Invoice";
 import Login from "./Pages/Auth/Login";
 import Signup from "./Pages/Auth/Signup";
 import ImageUpload from "./components/Ui/ImageUpload";
+import Router from "./Route";
 function App() {
+  
   return (<React.Fragment>
-    {/* <AuthLayout> */}
-       {/* <Home1/>  */}
-       {/* <Home2/> */}
-       {/* <Home3/> */}
-    {/* </AuthLayout> */}
-    <Signup/>
-    <Login/>
+    <Router/>
      </React.Fragment>
   )
 }

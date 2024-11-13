@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -242,13 +243,22 @@ const Header = () => {
 
             <div className="right-side">
               <div className="header-widget">
-                <a
-                  href="#sign-in-dialog"
+                <Link
+                  to="/login"
                   className="popup-with-zoom-anim log-in-button"
                 >
                   <i className="icon-feather-log-in"></i>
-                  <span>Log In / Register</span>
-                </a>
+                  <span>Log In</span>
+                </Link>
+                </div>
+                <div className="header-widget">
+                <Link
+                  to="/signup"
+                  className="popup-with-zoom-anim log-in-button"
+                >
+                  <i className="icon-feather-log-in"></i>
+                  <span>Register</span>
+                </Link>
               </div>
 
               <span className="mmenu-trigger">

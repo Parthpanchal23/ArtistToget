@@ -24,10 +24,10 @@ function Home1() {
         </h3>
     </div>
     </Banner>
-        {/* <CategoriesListing/> 
+        <CategoriesListing/> 
         <FeatureJob title="Featured Jobs"/>
         <HighRatedArtist/>
-        <PricingConent title="Membership Plans"/>  */}
+        <PricingConent title="Membership Plans"/> 
     </>
   )
 }
