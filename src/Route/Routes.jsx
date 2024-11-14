@@ -10,12 +10,12 @@ export const routes =[
         Components:<Home1/>
     },
     {
-        path:import.meta.env.VITE_PUBLIC_URL+"home2",
+        path:"/home2",
         auth:['ARTIST'],
         Components:<Home2/>
     },
     {
-        path:import.meta.env.VITE_PUBLIC_URL+"home3",
+        path:"/home3",
         auth:['HIRER'],
         Components:<Home3/>
     }

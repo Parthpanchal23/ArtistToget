@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const ArtistProfile = () => {
   return (
     <>
@@ -167,19 +169,19 @@ const ArtistProfile = () => {
                 <nav className="pagination">
                   <ul>
                     <li>
-                      <a href="#" className="ripple-effect current-page">
+                      <Link to="#" className="ripple-effect current-page">
                         1
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#" className="ripple-effect">
+                      <Link to="#" className="ripple-effect">
                         2
-                      </a>
+                      </Link>
                     </li>
                     <li className="pagination-arrow">
-                      <a href="#" className="ripple-effect">
+                      <Link to="#" className="ripple-effect">
                         <i className="icon-material-outline-keyboard-arrow-right"></i>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </nav>
@@ -205,10 +207,10 @@ const ArtistProfile = () => {
                       <h4>Development Team Leader</h4>
                       <div className="item-details margin-top-7">
                         <div className="detail-item">
-                          <a href="#">
+                          <Link to="#">
                             <i className="icon-material-outline-business"></i>
                             Acodia
-                          </a>
+                          </Link>
                         </div>
                         <div className="detail-item">
                           <i className="icon-material-outline-date-range"></i>
@@ -232,14 +234,14 @@ const ArtistProfile = () => {
 
                     <div className="item-content">
                       <h4>
-                        <a href="#">Lead UX/UI Designer</a>
+                        <Link to="#">Lead UX/UI Designer</Link>
                       </h4>
                       <div className="item-details margin-top-7">
                         <div className="detail-item">
-                          <a href="#">
+                          <Link to="#">
                             <i className="icon-material-outline-business"></i>
                             Acorta
-                          </a>
+                          </Link>
                         </div>
                         <div className="detail-item">
                           <i className="icon-material-outline-date-range"></i>
@@ -276,13 +278,13 @@ const ArtistProfile = () => {
                 </div>
               </div>
 
-              <a
-                href="#small-dialog"
+              <Link
+                to="#small-dialog"
                 className="apply-now-button popup-with-zoom-anim margin-bottom-50"
               >
                 Make an Offer
                 <i className="icon-material-outline-arrow-right-alt"></i>
-              </a>
+              </Link>
 
               <div className="sidebar-widget">
                 <div className="freelancer-indicators">
@@ -337,24 +339,24 @@ const ArtistProfile = () => {
                 <div className="freelancer-socials margin-top-25">
                   <ul>
                     <li>
-                      <a href="#" title="Dribbble" data-tippy-placement="top">
+                      <Link to="#" title="Dribbble" data-tippy-placement="top">
                         <i className="icon-brand-dribbble"></i>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#" title="Twitter" data-tippy-placement="top">
+                      <Link to="#" title="Twitter" data-tippy-placement="top">
                         <i className="icon-brand-twitter"></i>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#" title="Behance" data-tippy-placement="top">
+                      <Link to="#" title="Behance" data-tippy-placement="top">
                         <i className="icon-brand-behance"></i>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#" title="GitHub" data-tippy-placement="top">
+                      <Link to="#" title="GitHub" data-tippy-placement="top">
                         <i className="icon-brand-github"></i>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -377,14 +379,14 @@ const ArtistProfile = () => {
               <div className="sidebar-widget">
                 <h3>Attachments</h3>
                 <div className="attachments-container">
-                  <a href="#" className="attachment-box ripple-effect">
+                  <Link to="#" className="attachment-box ripple-effect">
                     <span>Cover Letter</span>
                     <i>PDF</i>
-                  </a>
-                  <a href="#" className="attachment-box ripple-effect">
+                  </Link>
+                  <Link to="#" className="attachment-box ripple-effect">
                     <span>Contract</span>
                     <i>DOCX</i>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -424,44 +426,44 @@ const ArtistProfile = () => {
                     </span>
                     <ul className="share-buttons-icons">
                       <li>
-                        <a
-                          href="#"
+                        <Link
+                          to="#"
                           data-button-color="#3b5998"
                           title="Share on Facebook"
                           data-tippy-placement="top"
                         >
                           <i className="icon-brand-facebook-f"></i>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="#"
+                        <Link
+                          to="#"
                           data-button-color="#1da1f2"
                           title="Share on Twitter"
                           data-tippy-placement="top"
                         >
                           <i className="icon-brand-twitter"></i>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="#"
+                        <Link
+                          to="#"
                           data-button-color="#dd4b39"
                           title="Share on Google Plus"
                           data-tippy-placement="top"
                         >
                           <i className="icon-brand-google-plus-g"></i>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="#"
+                        <Link
+                          to="#"
                           data-button-color="#0077b5"
                           title="Share on LinkedIn"
                           data-tippy-placement="top"
                         >
                           <i className="icon-brand-linkedin-in"></i>
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>

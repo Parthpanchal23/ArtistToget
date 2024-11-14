@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const FeatureItem = ({data}) => {
   let  date1 = new Date(data?.createdAt);
@@ -8,7 +9,7 @@ let days =Math.round
 (diff / (1000 * 3600 * 24));
 
   return (
-    <a href={data?.href||`./job/${data?._id}`} className="job-listing with-apply-button">
+    <Link to={data?.href||`./job/${data?._id}`} className="job-listing with-apply-button">
       <div className="job-listing-details">
         <div className="job-listing-company-logo">
           <img src={data?.img||data?.image||"./w-logo.png" } alt={data?.title} />
@@ -47,7 +48,7 @@ let days =Math.round
 
         <span className="list-apply-button ripple-effect">Apply Now</span>
       </div>
-    </a>
+    </Link>
   );
 };
 

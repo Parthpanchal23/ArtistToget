@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import FeatureItem from "./FeatureItem";
 import Heding from "../../Heding";
 import { useHttpClient } from "../../../lib/http-hook";
+import { Link } from "react-router-dom";
 const FeatureJob = ({ title }) => {
   const DefaultData = [
     {
@@ -144,12 +145,12 @@ const FeatureJob = ({ title }) => {
           <div className="row">
             <div className="col-xl-12">
               <Heding title={title ? title : ""}>
-                <a
-                  href="jobs-list-layout-full-page-map.html"
+                <Link
+                  href="jobs-list-layout-full-page-map"
                   className="headline-link"
                 >
                   Browse All Jobs
-                </a>
+                </Link>
               </Heding>
 
               {isloading && <p>Loading ...</p>}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
  const PricingConent = ({title}) => {
   return (
@@ -43,7 +44,7 @@ import React from 'react'
                                     <li>Highlighted in Search Results</li>
                                 </ul>
                             </div>
-                            <a href="pages-checkout-page.html" className="button full-width margin-top-20">Buy Now</a>
+                            <Link to="pages-checkout-page.html" className="button full-width margin-top-20">Buy Now</Link>
                         </div>
 
                         <div className="pricing-plan recommended">
@@ -60,7 +61,7 @@ import React from 'react'
                                     <li>Highlighted in Search Results</li>
                                 </ul>
                             </div>
-                            <a href="pages-checkout-page.html" className="button full-width margin-top-20">Buy Now</a>
+                            <Link to="pages-checkout-page.html" className="button full-width margin-top-20">Buy Now</Link>
                         </div>
 
                         <div className="pricing-plan">
@@ -76,7 +77,7 @@ import React from 'react'
                                     <li>Highlighted in Search Results</li>
                                 </ul>
                             </div>
-                            <a href="pages-checkout-page.html" className="button full-width margin-top-20">Buy Now</a>
+                            <Link to="pages-checkout-page.html" className="button full-width margin-top-20">Buy Now</Link>
                         </div>
                     </div>
 

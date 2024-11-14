@@ -2,6 +2,7 @@ import React from 'react'
 import { useForm } from "react-hook-form"
 import { useHttpClient } from '../../lib/http-hook';
 import ImageUpload from '../Ui/ImageUpload';
+import { Link } from 'react-router-dom';
 
 const RegistartionForm = (props) => {
 	const {register,watch,handleSubmit,formState:{errors,isDirty, isValid},setValue,reset} =useForm();
@@ -39,7 +40,7 @@ const RegistartionForm = (props) => {
 				
 				<div className="welcome-text">
 					<h3>Let's create your account!</h3>
-					<span>Don you have an account? <a href="/" className="register-tab">Sign Up!</a></span>
+					<span>Do you have an account? <Link to="/login" className="register-tab">Sign in!</Link></span>
 				</div>
 				<form  id="register-account-form" onSubmit={handleSubmit(onSubmit)} >
 				<div className="account-type">

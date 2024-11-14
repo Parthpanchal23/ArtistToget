@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const CompanyDetails = () =>{
     return (<>
     <div className="single-page-header" data-background-image="./images/single-company.jpg">
@@ -19,8 +21,8 @@ const CompanyDetails = () =>{
 					<div className="right-side">
 						<nav id="breadcrumbs" className="white">
 							<ul>
-								<li><a href="#">Home</a></li>
-								<li><a href="#">Browse Companies</a></li>
+								<li><Link to="#">Home</Link></li>
+								<li><Link to="#">Browse Companies</Link></li>
 								<li>Acodia</li>
 							</ul>
 						</nav>
@@ -50,7 +52,7 @@ const CompanyDetails = () =>{
 
 				<div className="listings-container compact-list-layout">
 					
-					<a href="single-job-page.html" className="job-listing">
+					<Link to="single-job-page" className="job-listing">
 
 						<div className="job-listing-details">
 
@@ -69,9 +71,9 @@ const CompanyDetails = () =>{
 						</div>
 
 						<span className="bookmark-icon"></span>
-					</a>
+					</Link>
 
-					<a href="single-job-page.html" className="job-listing">
+					<Link to="single-job-page" className="job-listing">
 
 						<div className="job-listing-details">
 
@@ -90,7 +92,7 @@ const CompanyDetails = () =>{
 						</div>
 
 						<span className="bookmark-icon"></span>
-					</a>	
+					</Link>	
 				</div>
 
 			</div>
@@ -131,7 +133,7 @@ const CompanyDetails = () =>{
 				</ul>
 
 				<div className="centered-button margin-top-35">
-					<a href="#small-dialog" className="popup-with-zoom-anim button button-sliding-icon">Leave a Review <i className="icon-material-outline-arrow-right-alt"></i></a>
+					<Link to="#small-dialog" className="popup-with-zoom-anim button button-sliding-icon">Leave a Review <i className="icon-material-outline-arrow-right-alt"></i></Link>
 				</div>
 
 			</div>
@@ -146,7 +148,7 @@ const CompanyDetails = () =>{
 					<h3>Location</h3>
 					<div id="single-job-map-container">
 						<div id="singleListingMap" data-latitude="52.520007" data-longitude="13.404954" data-map-icon="im im-icon-Hamburger"></div>
-						<a href="#" id="streetView">Street View</a>
+						<Link to="#" id="streetView">Street View</Link>
 					</div>
 				</div>
 
@@ -154,10 +156,10 @@ const CompanyDetails = () =>{
 					<h3>Social Profiles</h3>
 					<div className="freelancer-socials margin-top-25">
 						<ul>
-							<li><a href="#" title="Dribbble" data-tippy-placement="top"><i className="icon-brand-dribbble"></i></a></li>
-							<li><a href="#" title="Twitter" data-tippy-placement="top"><i className="icon-brand-twitter"></i></a></li>
-							<li><a href="#" title="Behance" data-tippy-placement="top"><i className="icon-brand-behance"></i></a></li>
-							<li><a href="#" title="GitHub" data-tippy-placement="top"><i className="icon-brand-github"></i></a></li>
+							<li><Link to="#" title="Dribbble" data-tippy-placement="top"><i className="icon-brand-dribbble"></i></Link></li>
+							<li><Link to="#" title="Twitter" data-tippy-placement="top"><i className="icon-brand-twitter"></i></Link></li>
+							<li><Link to="#" title="Behance" data-tippy-placement="top"><i className="icon-brand-behance"></i></Link></li>
+							<li><Link to="#" title="GitHub" data-tippy-placement="top"><i className="icon-brand-github"></i></Link></li>
 						
 						</ul>
 					</div>
@@ -182,10 +184,10 @@ const CompanyDetails = () =>{
 						<div className="share-buttons-content">
 							<span>Interesting? <strong>Share It!</strong></span>
 							<ul className="share-buttons-icons">
-								<li><a href="#" data-button-color="#3b5998" title="Share on Facebook" data-tippy-placement="top"><i className="icon-brand-facebook-f"></i></a></li>
-								<li><a href="#" data-button-color="#1da1f2" title="Share on Twitter" data-tippy-placement="top"><i className="icon-brand-twitter"></i></a></li>
-								<li><a href="#" data-button-color="#dd4b39" title="Share on Google Plus" data-tippy-placement="top"><i className="icon-brand-google-plus-g"></i></a></li>
-								<li><a href="#" data-button-color="#0077b5" title="Share on LinkedIn" data-tippy-placement="top"><i className="icon-brand-linkedin-in"></i></a></li>
+								<li><Link to="#" data-button-color="#3b5998" title="Share on Facebook" data-tippy-placement="top"><i className="icon-brand-facebook-f"></i></Link></li>
+								<li><Link to="#" data-button-color="#1da1f2" title="Share on Twitter" data-tippy-placement="top"><i className="icon-brand-twitter"></i></Link></li>
+								<li><Link to="#" data-button-color="#dd4b39" title="Share on Google Plus" data-tippy-placement="top"><i className="icon-brand-google-plus-g"></i></Link></li>
+								<li><Link to="#" data-button-color="#0077b5" title="Share on LinkedIn" data-tippy-placement="top"><i className="icon-brand-linkedin-in"></i></Link></li>
 							</ul>
 						</div>
 					</div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import CommentForm from '../../../components/Form/CommentForm';
 import RightContent from "../details/RightContent/index";
+import { Link } from 'react-router-dom';
 const BlogDetails = () =>{
     return (<React.Fragment>
     <div id="titlebar" className="gradient">
@@ -12,8 +13,8 @@ const BlogDetails = () =>{
     
                     <nav id="breadcrumbs" className="dark">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Blog</a></li>
+                            <li><Link to="#">Home</Link></li>
+                            <li><Link to="#">Blog</Link></li>
                             <li>Blog Post</li>
                         </ul>
                     </nav>
@@ -39,8 +40,8 @@ const BlogDetails = () =>{
                         <h3 className="margin-bottom-10">5 Myths That Prevent Job Seekers from Overcoming Failure</h3>
     
                         <div className="blog-post-info-list margin-bottom-20">
-                            <a href="#" className="blog-post-info">22 July 2018</a>
-                            <a href="#"  className="blog-post-info">5 Comments</a>
+                            <Link to="#" className="blog-post-info">22 July 2018</Link>
+                            <Link to="#"  className="blog-post-info">5 Comments</Link>
                         </div>
     
                         <p>Nam nisl lacus, dignissim ac tristique ut, scelerisque eu massa. Vestibulum ligula nunc, rutrum in malesuada vitae, tempus sed augue. Curabitur quis lectus quis augue dapibus facilisis. Vivamus tincidunt orci est, in vehicula nisi eleifend ut. Vestibulum sagittis varius orci vitae.</p>
@@ -58,10 +59,10 @@ const BlogDetails = () =>{
                             <div className="share-buttons-content">
                                 <span>Interesting? <strong>Share It!</strong></span>
                                 <ul className="share-buttons-icons">
-                                    <li><a href="#" data-button-color="#3b5998" title="Share on Facebook" data-tippy-placement="top"><i className="icon-brand-facebook-f"></i></a></li>
-                                    <li><a href="#" data-button-color="#1da1f2" title="Share on Twitter" data-tippy-placement="top"><i className="icon-brand-twitter"></i></a></li>
-                                    <li><a href="#" data-button-color="#dd4b39" title="Share on Google Plus" data-tippy-placement="top"><i className="icon-brand-google-plus-g"></i></a></li>
-                                    <li><a href="#" data-button-color="#0077b5" title="Share on LinkedIn" data-tippy-placement="top"><i className="icon-brand-linkedin-in"></i></a></li>
+                                    <li><Link to="#" data-button-color="#3b5998" title="Share on Facebook" data-tippy-placement="top"><i className="icon-brand-facebook-f"></i></Link></li>
+                                    <li><Link to="#" data-button-color="#1da1f2" title="Share on Twitter" data-tippy-placement="top"><i className="icon-brand-twitter"></i></Link></li>
+                                    <li><Link to="#" data-button-color="#dd4b39" title="Share on Google Plus" data-tippy-placement="top"><i className="icon-brand-google-plus-g"></i></Link></li>
+                                    <li><Link to="#" data-button-color="#0077b5" title="Share on LinkedIn" data-tippy-placement="top"><i className="icon-brand-linkedin-in"></i></Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -71,16 +72,16 @@ const BlogDetails = () =>{
                 
                 <ul id="posts-nav" className="margin-top-0 margin-bottom-40">
                     <li className="next-post">
-                        <a href="#">
+                        <Link to="#">
                             <span>Next Post</span>
                             <strong>16 Ridiculously Easy Ways to Find & Keep a Remote Job</strong>
-                        </a>
+                        </Link>
                     </li>
                     <li className="prev-post">
-                        <a href="#">
+                        <Link to="#">
                             <span>Previous Post</span>
                             <strong>11 Tips to Help You Get New Clients Through Cold Calling</strong>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
                 
@@ -91,7 +92,7 @@ const BlogDetails = () =>{
                     </div>
     
                     <div className="col-xl-6">
-                        <a href="pages-blog-post.html" className="blog-compact-item-container">
+                        <Link to="pages-blog-post.html" className="blog-compact-item-container">
                             <div className="blog-compact-item">
                                 <img src="images/blog-02a.jpg" alt=""/>
                                 <span className="blog-item-tag">Recruiting</span>
@@ -103,11 +104,11 @@ const BlogDetails = () =>{
                                     <p>Appropriately empower dynamic leadership skills after business portals. Globally myocardinate interactive.</p>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     </div>
     
                     <div className="col-xl-6">
-                        <a href="pages-blog-post.html" className="blog-compact-item-container">
+                        <Link to="pages-blog-post.html" className="blog-compact-item-container">
                             <div className="blog-compact-item">
                                 <img src="images/blog-03a.jpg" alt=""/>
                                 <span className="blog-item-tag">Marketing</span>
@@ -119,7 +120,7 @@ const BlogDetails = () =>{
                                     <p>Compellingly embrace empowered e-business after user friendly intellectual capital. Interactively front-end.</p>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                 </div>
                     
@@ -133,7 +134,7 @@ const BlogDetails = () =>{
                                     <div className="avatar"><img src="images/user-avatar-placeholder.png" alt=""/></div>
                                     <div className="comment-content"><div className="arrow-comment"></div>
                                         <div className="comment-by">Kathy Brown<span className="date">12th, June 2018</span>
-                                            <a href="#" className="reply"><i className="fa fa-reply"></i> Reply</a>
+                                            <Link to="#" className="reply"><i className="fa fa-reply"></i> Reply</Link>
                                         </div>
                                         <p>Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque non metus</p>
                                     </div>
@@ -143,7 +144,7 @@ const BlogDetails = () =>{
                                             <div className="avatar"><img src="images/user-avatar-placeholder.png" alt=""/></div>
                                             <div className="comment-content"><div className="arrow-comment"></div>
                                                 <div className="comment-by">Tom Smith<span className="date">12th, June 2018</span>
-                                                    <a href="#" className="reply"><i className="fa fa-reply"></i> Reply</a>
+                                                    <Link to="#" className="reply"><i className="fa fa-reply"></i> Reply</Link>
                                                 </div>
                                                 <p>Rrhoncus et erat. Nam posuere tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque.</p>
                                             </div>
@@ -152,7 +153,7 @@ const BlogDetails = () =>{
                                             <div className="avatar"><img src="images/user-avatar-placeholder.png" alt=""/></div>
                                             <div className="comment-content"><div className="arrow-comment"></div>
                                                 <div className="comment-by">Kathy Brown<span className="date">12th, June 2018</span>
-                                                    <a href="#" className="reply"><i className="fa fa-reply"></i> Reply</a>
+                                                    <Link to="#" className="reply"><i className="fa fa-reply"></i> Reply</Link>
                                                 </div>
                                                 <p>Nam posuere tristique sem, eu ultricies tortor.</p>
                                             </div>
@@ -162,7 +163,7 @@ const BlogDetails = () =>{
                                                     <div className="avatar"><img src="images/user-avatar-placeholder.png" alt=""/></div>
                                                     <div className="comment-content"><div className="arrow-comment"></div>
                                                         <div className="comment-by">John Doe<span className="date">12th, June 2018</span>
-                                                            <a href="#" className="reply"><i className="fa fa-reply"></i> Reply</a>
+                                                            <Link to="#" className="reply"><i className="fa fa-reply"></i> Reply</Link>
                                                         </div>
                                                         <p>Great template!</p>
                                                     </div>
@@ -178,7 +179,7 @@ const BlogDetails = () =>{
                                     <div className="avatar"><img src="images/user-avatar-placeholder.png" alt=""/> </div>
                                     <div className="comment-content"><div className="arrow-comment"></div>
                                         <div className="comment-by">John Doe<span className="date">15th, May 2015</span>
-                                            <a href="#" className="reply"><i className="fa fa-reply"></i> Reply</a>
+                                            <Link to="#" className="reply"><i className="fa fa-reply"></i> Reply</Link>
                                         </div>
                                         <p>Commodo est luctus eget. Proin in nunc laoreet justo volutpat blandit enim. Sem felis, ullamcorper vel aliquam non, varius eget justo. Duis quis nunc tellus sollicitudin mauris.</p>
                                     </div>

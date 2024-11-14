@@ -1,6 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
 import {useHttpClient} from "../../lib/http-hook";
+import { Link } from 'react-router-dom';
 
 const LoginForm = (props) => {
 	const {register,handleSubmit,reset,formState:{errors}} =useForm();
@@ -28,7 +29,7 @@ const LoginForm = (props) => {
         <div className={`popup-tab-content ${props?.className}`}>
 				<div className="welcome-text">
 					<h3>We're glad to see you again!</h3>
-					<span>Don't have an account? <a href="/" className="register-tab">Sign Up!</a></span>
+					<span>Don't have an account? <Link to="/signup" className="register-tab">Sign Up!</Link></span>
 				</div>
 					
 				<form  onSubmit={handleSubmit(onSubmit)}>
