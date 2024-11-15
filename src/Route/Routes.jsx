@@ -1,6 +1,7 @@
 import Home1 from "../Pages/home/home1";
 import Home2 from "../Pages/home/home2";
 import Home3 from "../Pages/home/home3";
+import Job from "../Pages/Job";
 
 export const routes =[
 
@@ -18,5 +19,10 @@ export const routes =[
         path:"/home3",
         auth:['HIRER'],
         Components:<Home3/>
+    },
+    {
+        path:"/job",
+        auth:['HIRER'],
+        Components:<Job/>
     }
 ]
