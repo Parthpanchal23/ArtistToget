@@ -140,8 +140,8 @@ const Job = () => {
 			</div> */}
 
 			<div className="listings-container grid-layout margin-top-35">
-				
-				<Link href="single-job-page.html" className="job-listing">
+				{console.log("pathname",window.location.pathname)}
+				<Link to={`${window.location.pathname}/25`} className="job-listing">
 
 					<div className="job-listing-details">
 						<div className="job-listing-company-logo">
@@ -165,7 +165,7 @@ const Job = () => {
 					</div>
 				</Link>	
 
-				<Link href="single-job-page.html" className="job-listing">
+				<Link to={`${window.location.pathname}/25`} className="job-listing">
 
 					<div className="job-listing-details">
 						<div className="job-listing-company-logo">
@@ -189,7 +189,7 @@ const Job = () => {
 					</div>
 				</Link>
 
-				<Link href="single-job-page.html" className="job-listing">
+				<Link to={`${window.location.pathname}/25`} className="job-listing">
 
 					<div className="job-listing-details">
 						<div className="job-listing-company-logo">
