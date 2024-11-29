@@ -1,3 +1,4 @@
+import Dashboard from "../Pages/Dashboard";
 import Home1 from "../Pages/home/home1";
 import Home2 from "../Pages/home/home2";
 import Home3 from "../Pages/home/home3";
@@ -30,5 +31,10 @@ export const routes =[
         path:"/job/:pid",
         auth:['HIRER'],
         Components:<SingleJob/>
-    }
+    },
+    {
+        path:"/dashboard",
+        auth:[''],
+        Components:<Dashboard/>
+    },
 ]

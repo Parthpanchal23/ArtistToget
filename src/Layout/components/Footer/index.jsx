@@ -4,7 +4,40 @@ import Newsletter from './Newsletter'
 import { Link } from 'react-router-dom'
 import LangSwitcher from './LangSwitcher'
 
-const Footer = () => {
+const Footer = ({type}) => {
+
+	if(type && type =="MINI")
+	{
+		return(<div className="small-footer margin-top-15">
+			<div className="small-footer-copyrights">
+				© {new Date().getFullYear()} <strong>ArtistToget</strong>. All Rights Reserved.
+			</div>
+			<ul className="footer-social-links">
+				<li>
+					<Link to="/" title="Facebook" data-tippy-placement="top">
+						<i className="icon-brand-facebook-f"></i>
+					</Link>
+				</li>
+				<li>
+					<Link to="/" title="Twitter" data-tippy-placement="top">
+						<i className="icon-brand-twitter"></i>
+					</Link>
+				</li>
+				<li>
+					<Link to="/" title="Google Plus" data-tippy-placement="top">
+						<i className="icon-brand-google-plus-g"></i>
+					</Link>
+				</li>
+				<li>
+					<Link to="/" title="LinkedIn" data-tippy-placement="top">
+						<i className="icon-brand-linkedin-in"></i>
+					</Link>
+				</li>
+			</ul>
+			<div className="clearfix"></div>
+		</div>)
+	}
+
   return (
     <div>
         <div id="footer">

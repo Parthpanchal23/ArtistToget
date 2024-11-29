@@ -3,6 +3,7 @@ import LayoutRoutes from "./LayoutRoutes";
 import { lazy, Suspense } from "react";
 import Splash from "../components/Ui/Splash";
 import AuthLayout from "../Layout/AuthLayout";
+import DashboardLayout from "../Layout/DashboardLayout";
 
 const DefaultRoute = lazy(() => import("../Pages/home/home1"));
 const Login = lazy(()=>import('../Pages/Auth/Login'));
@@ -15,7 +16,7 @@ const Router = () => {
         <Routes  >
           <Route exact path={"/login"} element={<Login />} />
           <Route exact path={"/signup"} element={<Signup />} />
-          <Route element={<AuthLayout/>}>
+          <Route element={<DashboardLayout/>}>
                 <Route exact path={"/"} element={<DefaultRoute />} />
                 <Route path={`/*`} element={<LayoutRoutes />} />
           </Route>
