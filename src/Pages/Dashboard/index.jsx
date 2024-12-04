@@ -5,6 +5,7 @@ import Notes from '../../components/Dashboard/Notes'
 import ProfileView from '../../components/Dashboard/ProfileView'
 import Notification from '../../components/Dashboard/Notification'
 import Order from '../../components/Dashboard/Order'
+import Breadcum from '../../components/Ui/Breadcum'
 
 const Dashboard = () => {
   return (
@@ -17,12 +18,12 @@ const Dashboard = () => {
 				<h3>Howdy, Tom!</h3>
 				<span>We are glad to see you again!</span>
 
-				<nav id="breadcrumbs" className="dark">
+				<Breadcum Mode={"dark"}>
 					<ul>
 						<li><Link to="#">Home</Link></li>
 						<li>Dashboard</li>
 					</ul>
-				</nav>
+				</Breadcum>
 			</div>
 	
 			<div className="fun-facts-container">

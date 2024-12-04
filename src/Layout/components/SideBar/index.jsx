@@ -44,7 +44,7 @@ const SideBar = () => {
 						</ul>
 
 						<ul data-submenu-title="Account">
-							<li><Link to="dashboard-settings.html"><i className="icon-material-outline-settings"></i> Settings</Link></li>
+							<li><Link to="/setting"><i className="icon-material-outline-settings"></i> Settings</Link></li>
 							<li><Link to="index-logged-out.html"><i className="icon-material-outline-power-settings-new"></i> Logout</Link></li>
 						</ul>
 						

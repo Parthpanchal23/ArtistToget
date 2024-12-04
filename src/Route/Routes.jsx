@@ -4,6 +4,7 @@ import Home2 from "../Pages/home/home2";
 import Home3 from "../Pages/home/home3";
 import Job from "../Pages/Job";
 import SingleJob from "../Pages/Job/[id]";
+import Setting from "../Pages/Settings";
 
 export const routes =[
 
@@ -36,5 +37,10 @@ export const routes =[
         path:"/dashboard",
         auth:[''],
         Components:<Dashboard/>
+    },
+    {
+        path:"/settings",
+        auth:[''],
+        Components:<Setting/>
     },
 ]
