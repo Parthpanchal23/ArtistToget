@@ -39,21 +39,23 @@
 <br>
 
 ## :dart: About
-
+Artisthub is a freelancing platform tailored for various types of artists. Whether you're a visual artist, musician, writer, or performer, Artisthub connects you with opportunities to showcase your work and collaborate on projects. Discover a community where creativity meets professional growth.
 <!-- Describe your project -->
 
 ## :sparkles: Features
-
-<!-- :heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3; -->
+1. **Search and Filter** for jobs and Artist
+2. **Profile Creation/Management** for both Client and Artist
+3. **Communication** between Client and Artists.
+4. **Job Application/Posting** systems.
+5. **Payment/Transaction Management**, potentially with an escrow system.
+6. **Rating/ Review system** for feedback.
 
 ## :rocket: Technologies
 
 The following tools were used in this project:
 
-<!-- - [Next js](https://nextjs.org/) -->
-- [React](https://pt-br.reactjs.org/)
+- [Next js 15](https://nextjs.org/) 
+- [React 19](https://pt-br.reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind css](https://tailwindcss.com/)
 
